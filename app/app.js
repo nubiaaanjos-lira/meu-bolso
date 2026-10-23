@@ -229,6 +229,8 @@
 
     $("rotulo-mes").textContent = "Total de " + MESES[new Date().getMonth()];
     $("total-mes").textContent = dinheiro(total);
+    // Média por dia: total do mês dividido pelo dia de hoje
+    $("media-dia").textContent = "Média de " + dinheiro(total / new Date().getDate()) + " por dia";
 
     // Lista do mês
     var lista = $("lista-gastos");
