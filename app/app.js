@@ -496,16 +496,120 @@
     await carregarGastos();
   }
 
-  // ---------- Assistente (chega na sexta) ----------
-  function avisoAssistente() {
-    mostrarAviso($("aviso-assistente"), "O assistente chega na sexta.", true);
+  // ---------- Assistente ----------
+  var LADO_MAXIMO_FOTO = 1600;
+
+  function travarAssistente(travar) {
+    $("botao-enviar").disabled = travar;
+    $("botao-foto").disabled = travar;
+  }
+
+  // Reduz a foto no próprio aparelho: no máximo 1600 px, em JPEG.
+  // A foto não é guardada em lugar nenhum.
+  function reduzirFoto(arquivo) {
+    return new Promise(function (resolve, reject) {
+      var endereco = URL.createObjectURL(arquivo);
+      var img = new Image();
+      img.onload = function () {
+        var escala = Math.min(1, LADO_MAXIMO_FOTO / Math.max(img.width, img.height));
+        var canvas = document.createElement("canvas");
+        canvas.width = Math.round(img.width * escala);
+        canvas.height = Math.round(img.height * escala);
+        canvas.getContext("2d").drawImage(img, 0, 0, canvas.width, canvas.height);
+        URL.revokeObjectURL(endereco);
+        var dataUrl = canvas.toDataURL("image/jpeg", 0.82);
+        resolve(dataUrl.slice(dataUrl.indexOf(",") + 1));
+      };
+      img.onerror = function () {
+        URL.revokeObjectURL(endereco);
+        reject(new Error("foto"));
+      };
+      img.src = endereco;
+    });
+  }
+
+  async function falarComAssistente(mensagem, imagem) {
+    var aviso = $("aviso-assistente");
+    mostrarAviso(aviso, imagem ? "Lendo o cupom..." : "Pensando...", true);
+    travarAssistente(true);
+    try {
+      var sessao = (await cliente.auth.getSession()).data.session;
+      if (!sessao) {
+        mostrarAviso(aviso, "Sua sessão venceu. Toque em Sair e entre de novo.");
+        return;
+      }
+
+      var resposta;
+      try {
+        resposta = await fetch("/api/assistente", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer " + sessao.access_token
+          },
+          body: JSON.stringify({
+            mensagem: mensagem,
+            imagem: imagem || null,
+            mime: imagem ? "image/jpeg" : null,
+            categorias: CATEGORIAS
+          })
+        });
+      } catch (e) {
+        mostrarAviso(aviso, "Sem conexão com a internet. Confira o Wi-Fi ou os dados móveis e tente de novo.");
+        return;
+      }
+
+      var dados = null;
+      try { dados = await resposta.json(); } catch (e) { dados = null; }
+
+      if (!dados) {
+        mostrarAviso(aviso, "O assistente só funciona com o app publicado na Netlify. Abra o endereço do app e tente de novo.");
+        return;
+      }
+      if (!resposta.ok || dados.erro) {
+        mostrarAviso(aviso, dados.erro || "O assistente não respondeu. Tente de novo ou lance o gasto à mão.");
+        return;
+      }
+
+      mostrarAviso(aviso, dados.resposta, true);
+      if (dados.lancado) {
+        $("frase").value = "";
+        await carregarGastos();
+      }
+    } finally {
+      travarAssistente(false);
+    }
   }
 
   $("form-assistente").addEventListener("submit", function (e) {
     e.preventDefault();
-    avisoAssistente();
+    var mensagem = $("frase").value.trim();
+    if (!mensagem) {
+      mostrarAviso($("aviso-assistente"), "Escreva o gasto ou a pergunta, por exemplo: mercado 50 hoje.");
+      $("frase").focus();
+      return;
+    }
+    falarComAssistente(mensagem, null);
   });
-  $("botao-foto").addEventListener("click", avisoAssistente);
+
+  $("botao-foto").addEventListener("click", function () {
+    $("arquivo-foto").click();
+  });
+
+  $("arquivo-foto").addEventListener("change", async function () {
+    var arquivo = this.files && this.files[0];
+    this.value = "";
+    if (!arquivo) return;
+
+    var imagem;
+    try {
+      imagem = await reduzirFoto(arquivo);
+    } catch (e) {
+      mostrarAviso($("aviso-assistente"), "Não consegui abrir esta foto. Tire outra foto do cupom, em JPEG ou PNG, e tente de novo.");
+      return;
+    }
+    falarComAssistente($("frase").value.trim(), imagem);
+  });
 
   // ---------- Início ----------
   desenharBotoesCategoria();

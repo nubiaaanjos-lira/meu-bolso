@@ -137,10 +137,11 @@
         <label for="frase" class="rotulo-campo">Conte o gasto numa frase</label>
         <input id="frase" type="text" placeholder="Ex.: gastei 50 no mercado" autocomplete="off">
         <div class="linha-botoes">
-          <button type="submit" class="botao-secundario">Enviar</button>
+          <button type="submit" id="botao-enviar" class="botao-secundario">Enviar</button>
           <button type="button" id="botao-foto" class="botao-secundario">Foto do cupom</button>
         </div>
-        <p id="aviso-assistente" class="aviso aviso-info" role="status" hidden></p>
+        <input id="arquivo-foto" type="file" accept="image/*" hidden>
+        <p id="aviso-assistente" class="aviso" role="status" hidden></p>
       </form>
     </section>
   </main>
