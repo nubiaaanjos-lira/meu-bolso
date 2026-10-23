@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#0a0a0a">
+  <meta name="theme-color" content="#05050a">
   <title>Gastos Família Lira</title>
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="icone.svg" type="image/svg+xml">
@@ -12,11 +12,52 @@
 </head>
 <body>
 
+  <!-- Ilustração de gráfico em neon, usada na entrada e no topo -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="neon-verde" x1="0" y1="1" x2="0" y2="0">
+        <stop offset="0" stop-color="#39ff88" stop-opacity="0.15"/>
+        <stop offset="1" stop-color="#39ff88"/>
+      </linearGradient>
+      <linearGradient id="neon-azul" x1="0" y1="1" x2="0" y2="0">
+        <stop offset="0" stop-color="#22d3ff" stop-opacity="0.15"/>
+        <stop offset="1" stop-color="#22d3ff"/>
+      </linearGradient>
+      <linearGradient id="neon-rosa" x1="0" y1="1" x2="0" y2="0">
+        <stop offset="0" stop-color="#ff3ec9" stop-opacity="0.15"/>
+        <stop offset="1" stop-color="#ff3ec9"/>
+      </linearGradient>
+      <linearGradient id="neon-amarelo" x1="0" y1="1" x2="0" y2="0">
+        <stop offset="0" stop-color="#ffe93b" stop-opacity="0.15"/>
+        <stop offset="1" stop-color="#ffe93b"/>
+      </linearGradient>
+      <filter id="brilho" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="6" result="borrado"/>
+        <feMerge><feMergeNode in="borrado"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+    </defs>
+    <symbol id="ilustracao" viewBox="0 0 240 160">
+      <g stroke="#ffffff" stroke-opacity="0.07">
+        <line x1="10" y1="40" x2="230" y2="40"/>
+        <line x1="10" y1="80" x2="230" y2="80"/>
+        <line x1="10" y1="120" x2="230" y2="120"/>
+      </g>
+      <rect x="28" y="96" width="30" height="54" rx="7" fill="url(#neon-azul)"/>
+      <rect x="78" y="74" width="30" height="76" rx="7" fill="url(#neon-rosa)"/>
+      <rect x="128" y="54" width="30" height="96" rx="7" fill="url(#neon-amarelo)"/>
+      <rect x="178" y="28" width="30" height="122" rx="7" fill="url(#neon-verde)"/>
+      <path d="M22 110 L74 86 L124 92 L174 50 L214 20" fill="none" stroke="#39ff88" stroke-width="5"
+            stroke-linecap="round" stroke-linejoin="round" filter="url(#brilho)"/>
+      <circle cx="214" cy="20" r="7" fill="#39ff88" filter="url(#brilho)"/>
+    </symbol>
+  </svg>
+
   <!-- Tela de entrada -->
   <main id="tela-entrada" class="tela">
     <div class="entrada-caixa">
-      <img src="icone.svg" alt="" class="entrada-icone">
+      <svg class="ilustracao-grande" role="img" aria-label="Gráfico subindo"><use href="#ilustracao"/></svg>
       <h1 class="nome-app">Gastos Família Lira</h1>
+      <p class="subtitulo">Seus gastos do mês, claros e no controle.</p>
       <form id="form-entrada" novalidate>
         <label for="email">E-mail</label>
         <input id="email" type="email" autocomplete="email" required>
@@ -32,7 +73,10 @@
   <!-- Tela principal -->
   <main id="tela-principal" class="tela" hidden>
     <header class="topo">
-      <h1 class="nome-app">Gastos Família Lira</h1>
+      <div class="marca">
+        <svg class="ilustracao-pequena" aria-hidden="true"><use href="#ilustracao"/></svg>
+        <h1 class="nome-app">Gastos Família Lira</h1>
+      </div>
       <button type="button" id="botao-sair" class="botao-link">Sair</button>
     </header>
 
@@ -40,6 +84,8 @@
       <p class="rotulo" id="rotulo-mes">Total do mês</p>
       <p class="total" id="total-mes">R$ 0,00</p>
       <p class="rotulo" id="media-dia">Média de R$ 0,00 por dia</p>
+      <svg id="grafico-linha" class="grafico-linha" viewBox="0 0 300 70" preserveAspectRatio="none"
+           role="img" aria-label="Gasto acumulado ao longo do mês"></svg>
     </section>
 
     <p id="aviso-geral" class="aviso" role="alert" hidden></p>
@@ -68,7 +114,16 @@
 
     <section class="cartao">
       <h2>Por categoria</h2>
-      <ul id="barras" class="barras"></ul>
+      <div class="rosca-area">
+        <div class="rosca">
+          <svg id="grafico-rosca" viewBox="0 0 120 120" role="img" aria-label="Divisão dos gastos por categoria"></svg>
+          <div class="rosca-centro">
+            <span class="rosca-rotulo">Total</span>
+            <strong id="rosca-total">R$ 0,00</strong>
+          </div>
+        </div>
+        <ul id="legenda" class="legenda"></ul>
+      </div>
     </section>
 
     <section class="cartao" id="cartao-resumo" hidden>

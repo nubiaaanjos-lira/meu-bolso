@@ -8,6 +8,30 @@
   var config = window.MEU_BOLSO || {};
   var CATEGORIAS = config.CATEGORIAS || ["Outros"];
 
+  // Uma cor neon para cada categoria
+  var CORES = {
+    "Alimentação": "#39ff88",
+    "Educação": "#22d3ff",
+    "Lazer": "#ff3ec9",
+    "Construção casa nova": "#ff8a1f",
+    "Contas da casa": "#ffe93b",
+    "Outros": "#b45cff"
+  };
+  var CORES_RESERVA = ["#39ff88", "#22d3ff", "#ff3ec9", "#ff8a1f", "#ffe93b", "#b45cff"];
+
+  function corDe(categoria) {
+    if (CORES[categoria]) return CORES[categoria];
+    var i = CATEGORIAS.indexOf(categoria);
+    return CORES_RESERVA[(i < 0 ? CORES_RESERVA.length - 1 : i) % CORES_RESERVA.length];
+  }
+
+  var SVG = "http://www.w3.org/2000/svg";
+  function elementoSvg(nome, atributos) {
+    var el = document.createElementNS(SVG, nome);
+    Object.keys(atributos).forEach(function (k) { el.setAttribute(k, atributos[k]); });
+    return el;
+  }
+
   // ---------- Atalhos para a tela ----------
   function $(id) { return document.getElementById(id); }
 
@@ -240,6 +264,10 @@
     gastos.forEach(function (g) {
       var item = document.createElement("li");
 
+      var ponto = document.createElement("span");
+      ponto.className = "ponto";
+      ponto.style.setProperty("--cor", corDe(g.categoria));
+
       var info = document.createElement("div");
       info.className = "gasto-info";
       var descricao = document.createElement("p");
@@ -262,40 +290,124 @@
       apagar.setAttribute("aria-label", "Apagar gasto de " + dinheiro(Number(g.valor)));
       apagar.addEventListener("click", function () { apagarGasto(g.id, apagar); });
 
+      item.appendChild(ponto);
       item.appendChild(info);
       item.appendChild(valor);
       item.appendChild(apagar);
       lista.appendChild(item);
     });
 
-    // Barras por categoria
-    var barras = $("barras");
-    barras.textContent = "";
+    desenharRosca(porCategoria, total);
+    desenharLinha(gastos);
+  }
+
+  // Gráfico de rosca: uma fatia por categoria, na cor neon dela
+  function desenharRosca(porCategoria, total) {
+    var svg = $("grafico-rosca");
+    svg.textContent = "";
+    $("rosca-total").textContent = dinheiro(total);
+
+    var raio = 48;
+    var volta = 2 * Math.PI * raio;
+    svg.appendChild(elementoSvg("circle", {
+      cx: 60, cy: 60, r: raio, fill: "none", stroke: "#1f1f30", "stroke-width": 14
+    }));
+
+    var andado = 0;
+    var legenda = $("legenda");
+    legenda.textContent = "";
+
     Object.keys(porCategoria).forEach(function (cat) {
       var valorCat = porCategoria[cat];
-      var porcento = total > 0 ? Math.round((valorCat / total) * 100) : 0;
+      var cor = corDe(cat);
+      var parte = total > 0 ? valorCat / total : 0;
+
+      if (parte > 0) {
+        var tamanho = parte * volta;
+        // Pequeno espaço entre as fatias, só quando há mais de uma
+        var espaco = parte < 1 ? Math.min(2, tamanho / 2) : 0;
+        svg.appendChild(elementoSvg("circle", {
+          cx: 60, cy: 60, r: raio, fill: "none", stroke: cor, "stroke-width": 14,
+          "stroke-dasharray": (tamanho - espaco) + " " + (volta - tamanho + espaco),
+          "stroke-dashoffset": -andado,
+          transform: "rotate(-90 60 60)",
+          style: "filter: drop-shadow(0 0 4px " + cor + ")"
+        }));
+        andado += tamanho;
+      }
 
       var item = document.createElement("li");
-      var texto = document.createElement("div");
-      texto.className = "barra-texto";
+      var ponto = document.createElement("span");
+      ponto.className = "ponto";
+      ponto.style.setProperty("--cor", cor);
       var nome = document.createElement("span");
+      nome.className = "legenda-nome";
       nome.textContent = cat;
-      var quanto = document.createElement("strong");
-      quanto.textContent = dinheiro(valorCat);
-      texto.appendChild(nome);
-      texto.appendChild(quanto);
+      var valor = document.createElement("span");
+      valor.className = "legenda-valor";
+      valor.textContent = dinheiro(valorCat);
+      var porcento = document.createElement("small");
+      porcento.textContent = Math.round(parte * 100) + "%";
+      valor.appendChild(porcento);
 
-      var fundo = document.createElement("div");
-      fundo.className = "barra-fundo";
-      var cheia = document.createElement("div");
-      cheia.className = "barra-cheia";
-      cheia.style.width = porcento + "%";
-      fundo.appendChild(cheia);
-
-      item.appendChild(texto);
-      item.appendChild(fundo);
-      barras.appendChild(item);
+      item.appendChild(ponto);
+      item.appendChild(nome);
+      item.appendChild(valor);
+      legenda.appendChild(item);
     });
+  }
+
+  // Gráfico de linha: quanto o gasto do mês foi subindo, dia a dia, até hoje
+  function desenharLinha(gastos) {
+    var svg = $("grafico-linha");
+    svg.textContent = "";
+
+    var agora = new Date();
+    var diaHoje = agora.getDate();
+    var diasNoMes = new Date(agora.getFullYear(), agora.getMonth() + 1, 0).getDate();
+
+    var porDia = [];
+    for (var d = 0; d <= diasNoMes; d++) porDia.push(0);
+    gastos.forEach(function (g) {
+      var dia = Number(String(g.data).split("-")[2]);
+      if (dia >= 1 && dia <= diasNoMes) porDia[dia] += Number(g.valor) || 0;
+    });
+
+    var acumulado = [];
+    var soma = 0;
+    for (var i = 1; i <= diaHoje; i++) { soma += porDia[i]; acumulado.push(soma); }
+
+    var largura = 300, altura = 70, margem = 6;
+    var maximo = soma > 0 ? soma : 1;
+    var pontos = acumulado.map(function (v, idx) {
+      var x = diasNoMes > 1 ? (idx / (diasNoMes - 1)) * largura : 0;
+      var y = altura - margem - (v / maximo) * (altura - margem * 2);
+      return [x, y];
+    });
+    if (pontos.length === 1) pontos.push([pontos[0][0] + 1, pontos[0][1]]);
+
+    var defs = elementoSvg("defs", {});
+    var degrade = elementoSvg("linearGradient", { id: "area-linha", x1: 0, y1: 0, x2: 0, y2: 1 });
+    degrade.appendChild(elementoSvg("stop", { offset: 0, "stop-color": "#39ff88", "stop-opacity": 0.35 }));
+    degrade.appendChild(elementoSvg("stop", { offset: 1, "stop-color": "#39ff88", "stop-opacity": 0 }));
+    defs.appendChild(degrade);
+    svg.appendChild(defs);
+
+    var linha = pontos.map(function (p, idx) {
+      return (idx ? "L" : "M") + p[0].toFixed(1) + " " + p[1].toFixed(1);
+    }).join(" ");
+    var ultimo = pontos[pontos.length - 1];
+
+    svg.appendChild(elementoSvg("path", {
+      d: linha + " L" + ultimo[0].toFixed(1) + " " + altura + " L0 " + altura + " Z",
+      fill: "url(#area-linha)"
+    }));
+    svg.appendChild(elementoSvg("path", {
+      d: linha, fill: "none", stroke: "#39ff88", "stroke-width": 2.5,
+      "stroke-linejoin": "round", "stroke-linecap": "round",
+      "vector-effect": "non-scaling-stroke",
+      style: "filter: drop-shadow(0 0 4px #39ff88)"
+    }));
   }
 
   function desenharBotoesCategoria() {
@@ -305,6 +417,7 @@
       var botao = document.createElement("button");
       botao.type = "button";
       botao.className = "categoria";
+      botao.style.setProperty("--cor", corDe(cat));
       botao.textContent = cat;
       botao.setAttribute("role", "radio");
       botao.setAttribute("aria-checked", "false");
