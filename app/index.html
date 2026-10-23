@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0a0a0a">
+  <title>Gastos Família Lira</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icone.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icone.svg">
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+  <!-- Tela de entrada -->
+  <main id="tela-entrada" class="tela">
+    <div class="entrada-caixa">
+      <img src="icone.svg" alt="" class="entrada-icone">
+      <h1 class="nome-app">Gastos Família Lira</h1>
+      <form id="form-entrada" novalidate>
+        <label for="email">E-mail</label>
+        <input id="email" type="email" autocomplete="email" required>
+        <label for="senha">Senha</label>
+        <input id="senha" type="password" autocomplete="current-password" minlength="6" required>
+        <p id="aviso-entrada" class="aviso" role="alert" hidden></p>
+        <button type="submit" id="botao-entrar" class="botao-principal">Entrar</button>
+        <button type="button" id="botao-criar" class="botao-secundario">Criar conta</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- Tela principal -->
+  <main id="tela-principal" class="tela" hidden>
+    <header class="topo">
+      <h1 class="nome-app">Gastos Família Lira</h1>
+      <button type="button" id="botao-sair" class="botao-link">Sair</button>
+    </header>
+
+    <section class="cartao cartao-total" aria-live="polite">
+      <p class="rotulo" id="rotulo-mes">Total do mês</p>
+      <p class="total" id="total-mes">R$ 0,00</p>
+    </section>
+
+    <p id="aviso-geral" class="aviso" role="alert" hidden></p>
+
+    <section class="cartao">
+      <h2>Gastos do mês</h2>
+      <ul id="lista-gastos" class="lista"></ul>
+      <p id="lista-vazia" class="vazio">Nenhum gasto lançado neste mês.</p>
+    </section>
+
+    <section class="cartao">
+      <h2>Lançar à mão</h2>
+      <form id="form-gasto" novalidate>
+        <label for="valor">Valor (R$)</label>
+        <input id="valor" type="text" inputmode="decimal" placeholder="0,00" autocomplete="off" required>
+        <label for="descricao">Onde ou com o quê</label>
+        <input id="descricao" type="text" placeholder="Ex.: mercado, cimento, conta de luz" autocomplete="off">
+        <p class="rotulo-campo">Categoria</p>
+        <div id="botoes-categoria" class="categorias" role="radiogroup" aria-label="Categoria"></div>
+        <label for="data">Data</label>
+        <input id="data" type="date" required>
+        <p id="aviso-gasto" class="aviso" role="alert" hidden></p>
+        <button type="submit" id="botao-salvar" class="botao-principal">Salvar</button>
+      </form>
+    </section>
+
+    <section class="cartao">
+      <h2>Por categoria</h2>
+      <ul id="barras" class="barras"></ul>
+    </section>
+
+    <section class="cartao" id="cartao-resumo" hidden>
+      <h2>Resumo da semana</h2>
+      <p id="texto-resumo" class="texto-resumo"></p>
+    </section>
+
+    <section class="cartao cartao-assistente">
+      <h2>Assistente</h2>
+      <form id="form-assistente" novalidate>
+        <label for="frase" class="rotulo-campo">Conte o gasto numa frase</label>
+        <input id="frase" type="text" placeholder="Ex.: gastei 50 no mercado" autocomplete="off">
+        <div class="linha-botoes">
+          <button type="submit" class="botao-secundario">Enviar</button>
+          <button type="button" id="botao-foto" class="botao-secundario">Foto do cupom</button>
+        </div>
+        <p id="aviso-assistente" class="aviso aviso-info" role="status" hidden></p>
+      </form>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+  <script src="configuracao.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

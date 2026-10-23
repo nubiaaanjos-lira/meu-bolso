@@ -1,0 +1,305 @@
+/* Cores do briefing: preto e verde vivo, energia e progresso */
+:root {
+  --fundo: #0a0a0a;
+  --cartao: #151515;
+  --borda: #262626;
+  --texto: #f2f2f2;
+  --texto-suave: #9a9a9a;
+  --verde: #22e06b;
+  --verde-escuro: #0f5f30;
+  --vermelho: #ff6b6b;
+  --raio: 14px;
+}
+
+* { box-sizing: border-box; }
+
+[hidden] { display: none !important; }
+
+html, body {
+  margin: 0;
+  background: var(--fundo);
+  color: var(--texto);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+/* Celular primeiro (390 px); no computador a coluna fica centralizada */
+.tela {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 16px 16px 40px;
+}
+
+h1, h2 { margin: 0; }
+
+h2 {
+  font-size: 1rem;
+  color: var(--texto-suave);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.nome-app {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--verde);
+}
+
+/* Tela de entrada */
+.entrada-caixa {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.entrada-icone {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 12px;
+}
+
+.entrada-caixa .nome-app {
+  font-size: 1.75rem;
+  margin-bottom: 24px;
+}
+
+/* Campos */
+label, .rotulo-campo {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--texto-suave);
+  margin: 14px 0 6px;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  font-size: 1.05rem;
+  color: var(--texto);
+  background: var(--fundo);
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+}
+
+input:focus {
+  outline: 2px solid var(--verde);
+  border-color: transparent;
+}
+
+input[type="date"] { color-scheme: dark; }
+
+#valor {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+/* Botões */
+button {
+  font: inherit;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+button:disabled { opacity: 0.5; cursor: wait; }
+
+.botao-principal {
+  width: 100%;
+  margin-top: 18px;
+  padding: 15px;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #04120a;
+  background: var(--verde);
+  border: none;
+}
+
+.botao-secundario {
+  width: 100%;
+  margin-top: 10px;
+  padding: 13px;
+  font-weight: 700;
+  color: var(--verde);
+  background: transparent;
+  border: 1px solid var(--verde);
+}
+
+.botao-link {
+  padding: 8px 12px;
+  color: var(--texto-suave);
+  background: transparent;
+  border: 1px solid var(--borda);
+}
+
+/* Tela principal */
+.topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.cartao {
+  background: var(--cartao);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  padding: 16px;
+  margin-bottom: 14px;
+}
+
+.cartao-total {
+  border-color: var(--verde-escuro);
+  background: linear-gradient(160deg, #0f2a19, var(--cartao) 70%);
+}
+
+.rotulo {
+  margin: 0;
+  color: var(--texto-suave);
+  font-size: 0.95rem;
+}
+
+.total {
+  margin: 4px 0 0;
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: var(--verde);
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Lista do mês */
+.lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.lista li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--borda);
+}
+
+.lista li:last-child { border-bottom: none; }
+
+.gasto-info { flex: 1; min-width: 0; }
+
+.gasto-descricao {
+  margin: 0;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.gasto-detalhe {
+  margin: 2px 0 0;
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+}
+
+.gasto-valor {
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.botao-apagar {
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  color: var(--vermelho);
+  background: transparent;
+  border: 1px solid #4a2222;
+}
+
+.vazio {
+  margin: 0;
+  color: var(--texto-suave);
+}
+
+/* Botões de categoria */
+.categorias {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.categoria {
+  padding: 12px 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--texto);
+  background: var(--fundo);
+  border: 1px solid var(--borda);
+}
+
+.categoria[aria-checked="true"] {
+  color: #04120a;
+  background: var(--verde);
+  border-color: var(--verde);
+}
+
+/* Barras por categoria */
+.barras {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.barras li { margin-bottom: 12px; }
+
+.barra-texto {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+.barra-texto strong { font-variant-numeric: tabular-nums; }
+
+.barra-fundo {
+  height: 10px;
+  background: var(--fundo);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.barra-cheia {
+  height: 100%;
+  background: var(--verde);
+  border-radius: 6px;
+  transition: width 0.4s ease;
+}
+
+/* Resumo e assistente */
+.texto-resumo {
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.linha-botoes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+/* Avisos */
+.aviso {
+  margin: 12px 0 0;
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  color: var(--vermelho);
+  background: #2a1212;
+  border-radius: 10px;
+}
+
+.aviso-info,
+.aviso.sucesso {
+  color: var(--verde);
+  background: #0f2a19;
+}
