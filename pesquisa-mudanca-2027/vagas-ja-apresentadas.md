@@ -64,3 +64,9 @@ Atualize esta lista a cada pesquisa. Não repita um item, a não ser que haja no
 | PY-15 | 2026-11-05 | Paraguai | Residência permanente (Resolução DNM 407/2026) | Programa | https://eiglaw.com/paraguay-updates-economic-solvency-rules-for-permanent-residence/ | vigente |
 | DE-9 | 2026-11-05 | Alemanha | Isar Aerospace / Deutsche Bahn | Vagas ambientais em inglês | https://englishjobs.de/jobs/environmental_scientist?page=2 | não confirmada |
 | PT-4 | 2026-11-05 | Portugal | Grupo Pestana | Hotelaria (sem campanha 2026 localizada) | https://dinheirovivo.dn.pt/algarve-madeira-cascais-e-porto-o-pestana-tem-300-vagas-de-emprego-12819781.html | contato direto |
+| PY-16 | 2026-11-05 | Paraguai | ATOME Paraguay — Projeto Villeta | Fábrica de hidrogênio verde/amônia (US$ 650 mi) | https://idbinvest.org/pt/node/59713 | projeto financiado (obra não confirmada) |
+| PY-17 | 2026-11-05 | Paraguai | Expo Empleo ARP (Assunção, julho) | Feira com ~1.410 vagas, salários até G. 6,5 mi | https://www.hoy.com.py/nacionales/2026/07/15/expo-empleo-arp-ofrece-este-jueves-1410-vacancias-con-salarios-de-hasta-g-65-millones | anual (próxima: jul/2027) |
+| PY-12 (ATUALIZAÇÃO) | 2026-11-05 | Paraguai | Paracel | Sem página de vagas localizada; usar LinkedIn e emplea.mtess.gov.py | https://infonegocios.com.py/default/boom-inmobiliario-en-concepcion-los-proyectos-industriales-impulsan-la-venta-de-terrenos-y-nuevas-construcciones | contratando |
+| BR-1 | 2026-11-05 | Brasil | Bureau Veritas do Brasil | Técnico de segurança (PB, MG, SP, RJ) | https://www.infojobs.com.br/bureau-veritas-do-brasil | não confirmada |
+| BR-2 | 2026-11-05 | Brasil | AFRY Brasil | ~66 vagas (setor celulose) | https://br.indeed.com/cmp/Afry/jobs | não confirmada |
+| BR-3 | 2026-11-05 | Brasil | Vagas HSE em celulose (Agrobase) | Coordenador HSE Montes Claros; Especialista HSE Curitiba | https://www.agrobase.com.br/oportunidades/2026/07/especialista-de-hse-curitiba-pr/ | não confirmada |
