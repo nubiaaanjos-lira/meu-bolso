@@ -70,3 +70,8 @@ Atualize esta lista a cada pesquisa. Não repita um item, a não ser que haja no
 | BR-1 | 2026-11-05 | Brasil | Bureau Veritas do Brasil | Técnico de segurança (PB, MG, SP, RJ) | https://www.infojobs.com.br/bureau-veritas-do-brasil | não confirmada |
 | BR-2 | 2026-11-05 | Brasil | AFRY Brasil | ~66 vagas (setor celulose) | https://br.indeed.com/cmp/Afry/jobs | não confirmada |
 | BR-3 | 2026-11-05 | Brasil | Vagas HSE em celulose (Agrobase) | Coordenador HSE Montes Claros; Especialista HSE Curitiba | https://www.agrobase.com.br/oportunidades/2026/07/especialista-de-hse-curitiba-pr/ | não confirmada |
+| PY-16 (ATUALIZAÇÃO) | 2026-11-06 | Paraguai | Casale (EPC da ATOME Villeta) | Obra 2026–2029, contrato US$ 465 mi | https://casale.ch/casale-selected-as-sole-epc-contractor-for-atomes-green-nitrate-fertilizer-complex-in-villeta-paraguay/ | em execução |
+| PY-18 | 2026-11-06 | Paraguai | TOCSA S.A. | Construtora (~950 funcionários), obra da Paracel | https://connectamericas.com/company/tocsa-sa | contato direto |
+| PY-19 | 2026-11-06 | Paraguai | Itaipu / Yacyretá | Último concurso Itaipu em 2023 | https://www.ultimahora.com/mas-9500-postulantes-llenar-220-vacancias-la-itaipu-n3062238 | sem concurso 2026 |
+| EUA-11 | 2026-11-06 | EUA | Castle Hill Inn (Newport, RI) | Camareira H-2B out of country (verão 2026; 3 meses de experiência) | https://www.career.com/job/castle-hill-inn/h2b-housekeeper-out-of-country-2026/j202510291827178656469 | encerrada; acompanhar 2027 |
+| EUA-12 | 2026-11-06 | EUA | Omni Grove Park Inn (Asheville, NC) | 42 camareiras H-2B (mar/2026–jan/2027) | https://elportalmigrante.org/en/jobs/211566 | provavelmente preenchida |
