@@ -105,3 +105,5 @@ Atualize esta lista a cada pesquisa. Não repita um item, a não ser que haja no
 | PY-30 | 2026-11-08 | Paraguai | Consultoria SSO (catálogo SIPY) | Possível empregadora | https://connectamericas.com/sites/default/files/company_files/Catalogo%20de%20Servicios%20SS%20OO%20SIPY%20V4.pdf | contato direto |
 | EUA-18 | 2026-11-08 | EUA | Opal Grand (Delray Beach, FL) | Camareira H-2B 01/11/2026–01/08/2027, US$ 16,25–17/h, reembolso de visto | https://elportalmigrante.org/en/jobs/209795 | provavelmente preenchida |
 | ES-8 | 2026-11-08 | Espanha | Ordem GECCO 2027 | Ainda não publicada (esperada para dezembro) | https://www.inclusion.gob.es/en/w/el-gobierno-aprueba-la-orden-gecco-2026 | aguardar |
+| PY-31 | 2026-11-08 | Paraguai | DSSO / MTESS (órgão de fiscalização de SSO) | Contato não localizado | https://impuestospy.com/impuestos/resolucion-mtess-n-904-2025/ | referência |
+| EUA-19 | 2026-11-08 | EUA | Alasca (Sitka 2025; lodges de Denali) | Camareira H-2B (referência US$ 18,59/h; alguns não patrocinam) | https://elportalmigrante.org/en/jobs/189714 | referência |
