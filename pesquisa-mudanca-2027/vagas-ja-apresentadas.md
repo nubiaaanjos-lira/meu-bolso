@@ -112,3 +112,7 @@ Atualize esta lista a cada pesquisa. Não repita um item, a não ser que haja no
 | UY-3 | 2026-11-09 | Uruguai | Ministério da Economia | Consultor Tecnólogo Prevencionista (chamada pública) | https://www.gub.uy/ministerio-economia-finanzas/comunicacion/convocatorias/llamado-para-1-consultor-tecnologo-prevencionista | não confirmada |
 | CL-1 | 2026-11-09 | Chile | Vagas de Experto en Prevención de Riesgos (mineração/construção) | 1,2–2,5 mi CLP líquidos; exige registro SEREMI | https://www.chiletrabajos.cl/trabajo/prevencionista-de-riesgos-3911253 | referência |
 | AR-1 | 2026-11-09 | Argentina | Residência Mercosul + convalidação/matrícula provincial | Programa | https://expatsargentina.com/es/nationality/brazil/ | vigente |
+| UY-4 | 2026-11-09 | Uruguai | UPM Fray Bentos (via agência) | Segurança e Saúde Ocupacional (post LinkedIn, data não localizada) | https://uy.linkedin.com/in/antonellagassoscaglia | não confirmada |
+| UY-5 | 2026-11-09 | Uruguai | Decreto 127/014 (Serviços de Prevenção obrigatórios, empresas 5+) | Lei/contexto | https://www.impo.com.uy/bases/decretos-reglamento/127-2014 | vigente |
+| UY-6 | 2026-11-09 | Uruguai | Revalidação de diploma (MEC, Decreto 200/2022) | Validação | https://www.impo.com.uy/bases/decretos-originales/200-2022 | vigente |
+| UY-7 | 2026-11-09 | Uruguai | Aluguel em Paysandú | Casa 3 quartos 35–55 mil UYU | https://www.infocasas.com.uy/gran-casa-alquiler-3-dormitorios/194121510 | referência |
