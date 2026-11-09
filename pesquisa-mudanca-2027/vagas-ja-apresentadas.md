@@ -116,3 +116,7 @@ Atualize esta lista a cada pesquisa. Não repita um item, a não ser que haja no
 | UY-5 | 2026-11-09 | Uruguai | Decreto 127/014 (Serviços de Prevenção obrigatórios, empresas 5+) | Lei/contexto | https://www.impo.com.uy/bases/decretos-reglamento/127-2014 | vigente |
 | UY-6 | 2026-11-09 | Uruguai | Revalidação de diploma (MEC, Decreto 200/2022) | Validação | https://www.impo.com.uy/bases/decretos-originales/200-2022 | vigente |
 | UY-7 | 2026-11-09 | Uruguai | Aluguel em Paysandú | Casa 3 quartos 35–55 mil UYU | https://www.infocasas.com.uy/gran-casa-alquiler-3-dormitorios/194121510 | referência |
+| UY-8 | 2026-11-09 | Uruguai | Prefeitura de Rivera | Técnico Prevencionista, 47.353 UYU nominais | https://www.rivera.gub.uy/portal/wp-content/uploads/2025/09/TDR-Tec-Prev.pdf | não confirmada |
+| UY-9 | 2026-11-09 | Uruguai | Títulos exigidos (UTU: Técnico Prevencionista / Tecnólogo; Eng. Tecnológico c/ 4 anos) | Referência | https://rrhh.utu.edu.uy/wp-content/uploads/2023/09/Convocatoria-areas-6672-6674-6676-Montevideo-y-Canelones.pdf | referência |
+| UY-10 | 2026-11-09 | Uruguai | Escolas públicas de tempo integral em Paysandú | Referência escolar | https://www.gub.uy/presidencia/comunicacion/noticias/tras-apertura-paysandu-suman-16-escuelas-tiempo-completo-habilitadas-2024 | referência |
+| EUA-20 | 2026-11-09 | EUA | Schulte Hospitality (Myrtle Beach) — 2026 | Camareira H-2B US$ 14,06/h, moradia US$ 125/semana | https://seasonaljobs.dol.gov/jobs/H-400-26003-531380 | encerrada (referência) |
