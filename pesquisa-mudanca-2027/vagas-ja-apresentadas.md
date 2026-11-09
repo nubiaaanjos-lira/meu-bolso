@@ -107,3 +107,8 @@ Atualize esta lista a cada pesquisa. Não repita um item, a não ser que haja no
 | ES-8 | 2026-11-08 | Espanha | Ordem GECCO 2027 | Ainda não publicada (esperada para dezembro) | https://www.inclusion.gob.es/en/w/el-gobierno-aprueba-la-orden-gecco-2026 | aguardar |
 | PY-31 | 2026-11-08 | Paraguai | DSSO / MTESS (órgão de fiscalização de SSO) | Contato não localizado | https://impuestospy.com/impuestos/resolucion-mtess-n-904-2025/ | referência |
 | EUA-19 | 2026-11-08 | EUA | Alasca (Sitka 2025; lodges de Denali) | Camareira H-2B (referência US$ 18,59/h; alguns não patrocinam) | https://elportalmigrante.org/en/jobs/189714 | referência |
+| UY-1 | 2026-11-09 | Uruguai | Residência Mercosul (isenta de taxa para brasileiros) | Programa | https://www.gub.uy/tramites/residencia-legal-permanente-mercosur | vigente |
+| UY-2 | 2026-11-09 | Uruguai | UPM e contratadas (CIEMSA, Syar) | ~7.000 empregos diretos (sem vaga específica) | https://www.upm.uy/siteassets/documents/2024_upm_forestaloriental_reportepublico_sp.pdf | contato direto |
+| UY-3 | 2026-11-09 | Uruguai | Ministério da Economia | Consultor Tecnólogo Prevencionista (chamada pública) | https://www.gub.uy/ministerio-economia-finanzas/comunicacion/convocatorias/llamado-para-1-consultor-tecnologo-prevencionista | não confirmada |
+| CL-1 | 2026-11-09 | Chile | Vagas de Experto en Prevención de Riesgos (mineração/construção) | 1,2–2,5 mi CLP líquidos; exige registro SEREMI | https://www.chiletrabajos.cl/trabajo/prevencionista-de-riesgos-3911253 | referência |
+| AR-1 | 2026-11-09 | Argentina | Residência Mercosul + convalidação/matrícula provincial | Programa | https://expatsargentina.com/es/nationality/brazil/ | vigente |
