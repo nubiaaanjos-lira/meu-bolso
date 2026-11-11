@@ -140,3 +140,6 @@ Atualize esta lista a cada pesquisa. Não repita um item, a não ser que haja no
 | BR-10 | 2026-11-11 | Brasil (home office) | Bureau Veritas | Técnico(a) SST home office | https://jobijoba.com.br/detail/97/2142b5ea44cea47664a8aed54dff0f74 | não confirmada |
 | PY-16 (ATUALIZAÇÃO) | 2026-11-11 | Paraguai | ATOME | Decreto de tarifa revogado (jun); proposta de parque solar 300 MW (ago); busca acordo (nov) | https://www.ultimahora.com/atome-propone-un-parque-solar-de-300-mw-en-villeta | BAIXA |
 | EUA-21 | 2026-11-11 | EUA | The Sebastian Vail / Deer Valley | Camareira inverno 2026/27, US$ 20–21/h | https://elportalmigrante.org/en/jobs/222816 | já começou / in-country |
+| BR-12 | 2026-11-11 | Brasil (home office, PJ) | Agrobase — conteudista/tutora/curadoria SST rural (6 vagas) | Educação em SST | https://www.agrobase.com.br/oportunidades/2026/05/conteudista-revisor-tecnologias-digitais-em-sst-no-agronegocio-home-office/ | não confirmadas |
+| BR-11 | 2026-11-11 | Brasil | Empresa não identificada | Engenheiro(a) de Segurança de Processos | https://www.vagas.com.br/vagas/v2828727/engenheiro-seguranca-processos | não confirmada |
+| BR-13 | 2026-11-11 | Brasil (Macaé) | Gerente de SMS (jan/2026) / Eng. SST onshore (abr/2026) | Petróleo e gás | https://www.agrobase.com.br/oportunidades/2026/01/gerente-de-sms-macae-rj/ | não confirmadas |
