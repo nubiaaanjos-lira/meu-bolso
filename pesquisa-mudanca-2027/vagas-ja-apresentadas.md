@@ -149,3 +149,9 @@ Atualize esta lista a cada pesquisa. Não repita um item, a não ser que haja no
 | MX-1 | 2026-11-11 | México | Nouryon / Kiewit | Regional PSM Engineer / Process Safety Engineer | https://www.nouryon.com/vacancies/2026-mexico-los-reyes-la-paz-finance-regional-psm-engineer-n0013715/ | não confirmada |
 | BR-14 | 2026-11-11 | Brasil | Vagas.com.br / BW Energy | Engenheiro(a) de Segurança de Processos / Senior Process Safety Engineer | https://www.vagas.com.br/vagas/v2761468/engenheiro-de-seguranca-de-processos | não confirmada |
 | DE-11 | 2026-11-11 | Alemanha | Henkel (Düsseldorf) / thyssenkrupp Uhde (Dortmund) / Covestro | Process Safety (inglês) | https://jobs.thyssenkrupp.com/job/id/961417 | não confirmada |
+| REM-4 | 2026-11-12 | Remoto (São Paulo/LATAM) | ConsultDSS | Senior Consultant Process Safety Management LATAM (HAZOP chair) | https://consultdss.recruitee.com/o/senior-consultant-process-safety-management-latam | não confirmada |
+| CL-2 (ATUALIZAÇÃO) | 2026-11-12 | Chile | Henkel | Contrato integral/indeterminado; e-mail Recruitment.LATAM@henkel.com | https://www.henkel.co.uk/careers/jobs-and-application/2159072-2159072 | não confirmada |
+| ES-10 | 2026-11-12 | Espanha | Henkel | Process Safety Engineer | https://www.henkel.es/carreras/empleo-y-solicitud/2172006-2172006 | não confirmada |
+| BR-15 | 2026-11-12 | Brasil (Rio) | BW Energy | Process Safety Manager (out/2026) | https://apply.workable.com/bw-energy/jobs/view/208CF61ABC.md | não confirmada |
+| UY-12 | 2026-11-12 | Uruguai (Fray Bentos) | Kemira | Production Engineer, Pulp & Paper | https://careers.kemira.com/job/Fray-Bentos-Production-Engineer%E2%80%8E%2C-P&P%2C-UY/1068585301/ | provavelmente encerrada |
+| CUR-1 | 2026-11-12 | Geral | Cursos HAZOP/LOPA (FM2S, TÜV SÜD, Astutis) | Capacitação | https://www.tuvsud.com/es-es/store/academy-es/seguridad/seguridad-de-procesos/2033.1-curso-especialista-hazop-ciberhazop-analisis-riesgos | referência |
