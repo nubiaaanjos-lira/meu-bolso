@@ -174,3 +174,9 @@ Atualize esta lista a cada pesquisa. Não repita um item, a não ser que haja no
 | PY-40 | 2026-11-13 | Paraguai | BID | Especialista nacional em salvaguardas ambientais/sociais | https://uncareer.net/vacancy/sector-specialist-825303 | não confirmada |
 | EUA-22 | 2026-11-13 | EUA (Illinois/Ohio) | Barton Staffing / Pretium / Latitude 36 | EHS Specialist bilíngue (US$ 70–80 mil) — sem visto | https://jobright.ai/jobs/info/696fd8ea82817106e976dd36 | referência |
 | PT-6 | 2026-11-13 | Portugal (Algarve) | 3HB Hotels / Multitempo | Hotelaria (400+ e 100+ vagas) | https://postal.pt/algarve/3hb-hotels-reforca-equipas-no-algarve-com-mais-de-400-oportunidades-de-trabalho/ | não confirmada |
+| CUR-8 | 2026-11-13 | On-line | BID — cursos NDAS (MPAS) | NDAS 1 grátis, 3 h, insígnia | https://cursos.iadb.org/es/node/1890 | vigente |
+| CUR-9 | 2026-11-13 | On-line | Banco Mundial | Introducción al Marco Ambiental y Social | https://www.worldbank.org/en/olc/course/43706 | confirmar |
+| BR-17 | 2026-11-13 | Brasil (remoto) | Robert Half | Técnico e Supervisor de Segurança do Trabalho (remoto) | https://www.roberthalf.com/br/pt/vagas/brazil/seguranca | não confirmada |
+| UY-15 | 2026-11-13 | Uruguai | UTU (DGEPT) | Convocatórias docentes área Prevencionista | https://rrhh.utu.edu.uy/wp-content/uploads/2025/11/CONVOCATORIA-AREAS-PREVENCIONISTA-PAYSANDU.pdf | acompanhar |
+| PT-7 (ATUALIZAÇÃO) | 2026-11-13 | Portugal | Visto de procura de trabalho | Suspenso desde 23/10/2025; novo visto qualificado sem regulamentação | https://dnbrasil.dn.pt/quais-vistos-para-morar-em-portugal-ainda-podem-ser-solicitados-no-brasil | suspenso |
+| IE-5 | 2026-11-13 | Irlanda | Listas de profissões (maio/2026) | 9 profissões liberadas para autorização geral | https://www.lewissilkin.com/en-ie/insights/2026/05/27/irelands-employment-permit-occupations-lists-whats-changed-in-may-2026 | referência |
