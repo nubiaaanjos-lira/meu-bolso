@@ -270,3 +270,7 @@ Atualize esta lista a cada pesquisa. Não repita um item, a não ser que haja no
 | CL-13 | 2026-11-22 | Chile (Santiago) | P&B Ingeniería y Construcción | Prevencionista mineração, exige residência em Santiago | https://www.chiletrabajos.cl/trabajo/3916133 | aberta até 02/01/2027 |
 | PY-1 (ATUALIZAÇÃO) | 2026-11-22 | Paraguai | Residência Mercosur — menores | Documentos dos pais, certidão de nascimento, autorização notarial se um dos pais ausente | https://www.ip.gov.py/ip/?p=580020 | vigente |
 | PY-69 | 2026-11-22 | Paraguai (Asunción) | Marriott — Aloft, Sheraton, Yacht & Golf Club | Utility Cleaner; Guest Environment Expert; diretores | https://careers.marriott.com/utility-cleaner/job/AE8A04269B4090B934E1BCB121238406 | confirmar |
+| PY-70 | 2026-11-22 | Paraguai | Agências: Capital Humano, PwC, Jazmín Mendoza, Find For You | Recrutamento e seleção | https://www.pwc.com/py/es/carrera/seleccion-de-personal.html | contato |
+| UY-20 | 2026-11-22 | Uruguai (Fray Bentos) | Kemira | Technician, EHSQ | https://careers.kemira.com/job/Fray-Bentos-Technician%2C-EHSQ%2C-Uruguay/1385555533/ | confirmar |
+| UY-21 | 2026-11-22 | Uruguai (Montevidéu) | BASF | EHS Technician meio período, inglês avançado | https://basf.jobs/red_SA/job/Montevideo-EHS-Technician/1376180533 | provavelmente encerrada |
+| CL-14 | 2026-11-22 | Chile (Antofagasta) | não localizado (chiletrabajos) | Experto en Prevención de Riesgos (Lei 21.015) | https://www.chiletrabajos.cl/trabajo/3929576 | aberta até 30/12/2026 |
