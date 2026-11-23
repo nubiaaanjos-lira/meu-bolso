@@ -282,3 +282,8 @@ Atualize esta lista a cada pesquisa. Não repita um item, a não ser que haja no
 | PY-74 | 2026-11-23 | Paraguai | Call centers (Cidesa fechou, 1.200 demitidos) | Alerta setor; português abre vagas | https://www.ultimahora.com/empresa-call-center-deja-empleo-1200-jovenes-n308379 | alerta |
 | REM-15 | 2026-11-23 | Remoto LATAM | Remote.com | Project Manager Saúde e Segurança Ocupacional | https://job-boards.greenhouse.io/remotecom/jobs/7728853003 | confirmar |
 | REM-16 | 2026-11-23 | Brasil (remoto) | Jobgether (empresa parceira) | Coordenador(a) de Segurança e Saúde | https://jobs.lever.co/jobgether/d863acf9-9521-4fc7-a9af-0841d120bfcd | confirmar |
+| PY-71 (ATUALIZAÇÃO) | 2026-11-23 | Paraguai (Villa Hayes) | Parglass | SORG diz "iniciando operações" (sem data); inauguração não localizada | https://www.ultimahora.com/avanza-construccion-de-moderna-planta-de-industria-de-vidrio | confirmar |
+| ES-1 | 2026-11-23 | Espanha (remoto) | Remote | Técnico PRL, €48.250–54.250/ano, só Espanha | https://jobs.accel.com/companies/remote/jobs/86154521-tecnico-en-prevencion-de-riesgos-laborales-health-safety-officer | confirmar |
+| UY-22 | 2026-11-23 | Uruguai | MVOT | Técnico/a Prevencionista Nº 7728/2026 (26/08/2026) | https://www.gub.uy/ministerio-vivienda-ordenamiento-territorial/institucional/concursos | provavelmente encerrado |
+| CL-15 | 2026-11-23 | Chile (Santiago) | construtora (nome não localizado) | Ingeniero en Prevención de Riesgos, 2 anos construção | https://www.chiletrabajos.cl/trabajo/3924761 | confirmar |
+| REM-17 | 2026-11-23 | Remoto (MX/CO/PE/CL) | GoFasti | EHS Specialist, inglês fluente | https://jobs.y-axis.com/jobs/957-environmental-health-safety-ehs-gofasti | confirmar |
